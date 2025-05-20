@@ -1,0 +1,192 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand{
+    font-size: 2rem;
+    color:black;
+    font-family: "Lilita One", serif;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    color:black;
+    font-family: "Rubik", serif;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color:black;
+}
+.search{
+    height: 40px;
+    width: 80%;
+    border-radius: 60px;
+    outline: none;
+    margin-right: -35px;
+    font-family: "Rubik", serif;
+    border: 2px solid rgba(248, 26, 26, 0.592);
+}
+.btn0{
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border: none;
+    background: rgb(248, 26, 26);
+    color:white;
+    border-radius: 60px;
+    font-weight: 700;
+}
+.main{
+    background: url('../img/food3.png') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%;
+}
+.main h1{
+    padding-top: 13vh;
+    font-family: "Playfair Display", serif;
+    font-size: 5.5vw;
+    font-weight: 700;
+    color: white;
+}
+.btn1{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(248, 26, 26);
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+}
+.news{
+    background-color: black;
+    color: white;
+}
+.fa-facebook{
+    font-size: 50px;
+    padding: 30px;
+}
+.fa-instagram{
+    font-size: 50px;
+    padding: 30px;
+}
+.fa-youtube{
+    font-size: 50px;
+    padding: 30px;
+}
+.fa-tiktok{
+    font-size: 50px;
+    padding: 30px;
+}
+
+
+
+.reservation-form h2, 
+.cancel-form h2 {
+    font-family: 'Lilita One', sans-serif;
+    color: #b70000;
+    margin-bottom: 30px;
+}
+
+.reservation-form form, 
+.cancel-form form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form .form-control, 
+.cancel-form .form-control {
+    border-radius: 50px;
+}
+
+.reservation-form button,
+.cancel-form button {
+    border-radius: 500px;
+}
+
+
+
+
+.menu-section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.menu-section {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.menu h2 {
+    margin-left: 15px;
+}
+
+.menu h1 {
+    font-family: 'Lilita One', sans-serif;
+    color: #b70000;
+}
+
+.menu-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.menu h2 {
+    color: #b70000;
+    border-bottom: 2px solid #b70000;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.text-danger {
+    font-weight: bold;
+}
+
+
+
+.contact h1 {
+    font-family: 'Lilita One', sans-serif;
+    color: #b70000;
+    margin-bottom: 30px;
+}
+
+.contact h4 {
+    color: #b70000;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.contact p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.ratio-16x9 {
+    height: 500px;  /* Adjust the height */
+    width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.add-to-cart {
+    border-radius: 50px;
+}
+
+
+
+
