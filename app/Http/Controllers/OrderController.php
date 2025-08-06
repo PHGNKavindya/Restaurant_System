@@ -1,11 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-use Auth;
+// use Auth;
 use App\Models\Order;
 use App\Models\Food;
+use App\Models\Table;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
 
 class OrderController extends Controller
 {
@@ -44,15 +47,31 @@ class OrderController extends Controller
         //     'table_id' => 'nullable|exists:tables,id',
         // ]);
 
+
+        $request->validate([
+    'table_id' => 'required|exists:tables,id', // check valid table
+    'cart_data' => 'required|json',
+        ]);
+
         $cartData = json_decode($request->cart_data, true);
 // dd($cartData);
         DB::beginTransaction();
 
         try {
+            // $order = Order::create([
+            //     'customer_id' => Auth::id(),
+            //     'table_id' => $request->table_id,
+            // ]);
+
+
+            $customer = Auth::user()->customer ?? null;
+
             $order = Order::create([
-                'customer_id' => Auth::id(),
+                // 'customer_id' => $customer ? $customer->id : 1, // fallback guest ID
+                'customer_id' => Auth::id(), 
                 'table_id' => $request->table_id,
             ]);
+
 
             // $item['food_id']
             foreach ($cartData as $item) {
@@ -74,6 +93,8 @@ class OrderController extends Controller
             // return redirect()->back()->with('error', 'Failed to place order.');
         }
     }
+
+
 
 
     /**
@@ -118,6 +139,36 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
+        $order->delete();
+        return back()->with('success', 'Order deleted successfully.');
+    }
+
+    /**
+     * Mark the order as prepared.
+     */
+    public function markPrepared(Order $order)
+    {
+        $order->status = 'prepared';
+        $order->save();
+        return back()->with('success', 'Order marked as prepared.');
+    }
+
+    /**
+     * Mark the order as paid.
+     */
+    public function markPaid(Order $order)
+    {
+        $order->status = 'paid';
+        $order->save();
+        return back()->with('success', 'Order marked as paid.');
+    }
+
+    /**
+     * Close the order and remove it.
+     */
+    public function close(Order $order)
+    {
+        $order->delete();
+        return back()->with('success', 'Order closed and removed.');
     }
 }

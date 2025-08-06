@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'status'
     ];
 
     /**
@@ -41,4 +42,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function isAdmin()
+{
+    return $this->status == 2;
+}
+
+// User.php
+public function orders()
+{
+    return $this->hasMany(Order::class, 'customer_id');
+}
+
+
+
+
+
 }

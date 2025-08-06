@@ -7,7 +7,7 @@ use App\Models\Reservation;
 
 class Table extends Model
 {
-    protected $fillable = ['capacity'];
+    protected $fillable = ['capacity','number'];
 
     public function reservations()
 {

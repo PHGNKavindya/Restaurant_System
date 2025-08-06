@@ -2,239 +2,119 @@
 
 @section('content')
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-
-    <!-- Menu Section -->
-    <section class="menu py-5">
-        <div class="container">
-            <h1 class="text-center mb-5">Our Menu</h1>
-
-            <!-- Category: Main Course -->
-            <h2 class="menu-section-title">Main</h2>
-            <div class="row row-cols-1 row-cols-md-4 g-4 menu-section">
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-            </div>
-   
-
-            <!-- Category: Main Course -->
-            <h2 class="menu-section-title">Main</h2>
-            <div class="row row-cols-1 row-cols-md-4 g-4 menu-section">
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Category: Main Course -->
-            <h2 class="menu-section-title">Main</h2>
-            <div class="row row-cols-1 row-cols-md-4 g-4 menu-section">
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Category: Main Course -->
-            <h2 class="menu-section-title">Main</h2>
-            <div class="row row-cols-1 row-cols-md-4 g-4 menu-section">
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <img src="img/burger.jpg" class="menu-img mb-3" alt="Spring Rolls">
-                        <h5>Spring Rolls</h5>
-                        <p>Crispy rolls with fresh vegetables</p>
-                        <p class="text-danger">$3.99</p>
-                        <p><input type="number" class="form-control quantity" min="0" value="0"></p>
-                        <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
-                    </div>
-                </div>
+    <h2 class="menu-section-title">Our Menu</h2>
+<!-- <div class="row row-cols-1 row-cols-md-4 g-4 menu-section">
+    @foreach($foods as $food)
+        <div class="col">
+            <div class="text-center">
+                <img src="{{ asset('storage/' . $food->img_path) }}" class="menu-img mb-3" alt="{{ $food->name }}">
+                <h5>{{ $food->name }}</h5>
+                <p>{{ $food->description }}</p>
+                <p>{{ $food->category ? $food->category->name : 'N/A' }}</p>
+                <p class="text-danger">${{ number_format($food->price, 2) }}</p>
+                <p><input type="number" class="form-control quantity" min="0" value="0"></p>
+                <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
             </div>
         </div>
+    @endforeach
+</div> -->
 
-        <!-- Cart Modal -->
+
+@if($activeOrder)
+    <div class="alert alert-info">
+        @if($activeOrder->status == 'placed')
+            You placed an order! Items:
+            <ul>
+                @foreach($activeOrder->items as $item)
+                    <li>{{ $item->name }} (x{{ $item->pivot->quantity }})</li>
+                @endforeach
+            </ul>
+            Status: <strong>Waiting for kitchen</strong>
+        @elseif($activeOrder->status == 'prepared')
+            Your order is being prepared. Please wait...
+        @elseif($activeOrder->status == 'paid')
+            Order completed! Thank you 🥳
+        @endif
+    </div>
+@endif
+
+
+
+@foreach($categories as $category)
+    <h2 class="menu-section-title">{{ $category->name }}</h2>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4 menu-section">
+        @foreach($category->foods as $food)
+            <div class="col">
+                <div class="text-center">
+                    <!-- <img src="{{ asset(str_replace('public/', '', $food->img_path)) }}" class="menu-img mb-3" alt="{{ $food->name }}"> -->
+                    <!-- <img src="{{ asset($food->img_path) }}" class="menu-img mb-3" alt="{{ $food->name }}"> -->
+                    <img src="{{ asset('storage/' . $food->img_path) }}" class="menu-img mb-3" alt="{{ $food->name }}">
+                    <h5>{{ $food->name }}</h5>
+                    <p>{{ $food->description }}</p>
+                    <p class="text-danger">${{ number_format($food->price, 2) }}</p>
+                    <p><input type="number" class="form-control quantity" min="0" value="0"></p>
+                    <p><button class="btn btn-danger add-to-cart">Add to Cart</button></p>
+                </div>
+            </div>
+        @endforeach
+    </div>
+@endforeach
+
+
+
+
+
+<!-- Cart Modal -->
 <div class="modal fade" id="cartModal" tabindex="-1">
   <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <form method="POST" action="{{ route('orders.store') }}">
-        @csrf
-        <div class="modal-header">
-          <h5 class="modal-title">Your Cart</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Qty</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody id="cart-items"></tbody>
-            <tfoot>
-              <tr>
-                <th colspan="2">Total</th>
-                <th id="cart-total">$0.00</th>
-              </tr>
-            </tfoot>
-          </table>
+    <form method="POST" action="{{ route('orders.store') }}" class="modal-content">
+      @csrf
+      <div class="modal-header">
+        <h5 class="modal-title">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
 
-          <!-- Table ID Input -->
-          <div class="mb-3">
-            <label for="table_id">Table ID</label>
-            <input type="text" name="table_id" class="form-control" required>
-          </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Qty</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+          <tfoot>
+            <tr>
+              <th colspan="2">Total</th>
+              <th id="cart-total">$0.00</th>
+            </tr>
+          </tfoot>
+        </table>
 
-          <!-- Hidden field to store cart data -->
-          <input type="hidden" name="cart_data" id="cart-data">
+        <div class="mb-3">
+          <label for="table_id">Table ID</label>
+          <input type="text" name="table_id" class="form-control" required placeholder="Enter table ID">
         </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-success">Confirm Order</button>
-        </div>
-      </form>
-    </div>
+
+        <input type="hidden" name="cart_data" id="cart-data">
+      </div>
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Confirm Order</button>
+      </div>
+    </form>
   </div>
 </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
     </section>

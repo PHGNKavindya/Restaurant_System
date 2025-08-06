@@ -1,8 +1,39 @@
+style.css
+
+
+
 body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../img/newbackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(0px); /* Adjust as needed */
+    opacity: 0.2;
+    z-index: -1; /* ✅ Push fully behind everything */
+}
+
+.carousel-inner {
+  height: 600px; /* Set your desired fixed height */
+  overflow: hidden; /* Hide anything outside the fixed height */
+}
+
+.carousel-inner img {
+  height: 100%;   /* Make the image fill the container height */
+  width: 100%;    /* Make the image fill container width */
+  object-fit: cover; /* Crop and cover to keep aspect ratio */
+}
+
+
 .navbar{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -43,13 +74,25 @@ body{
     border-radius: 60px;
     font-weight: 700;
 }
-.main{
+/* .main{
     background: url('../img/food3.png') no-repeat;
     background-size: cover;
     height: 100vh;
     background-position: 50% 50%;
     width: 100%;
+} */
+
+.dash{
+    background: url('../img/newadmincover.jpg') no-repeat;
+    background-size: cover;
+    height: 50vh;
+    background-position: 50% 50%;
+    width: 100%;
 }
+
+
+
+
 .main h1{
     padding-top: 13vh;
     font-family: "Playfair Display", serif;
@@ -57,7 +100,7 @@ body{
     font-weight: 700;
     color: white;
 }
-.btn1{
+/* .btn1{
     height: 45px;
     width: 35%;
     border: none;
@@ -66,26 +109,61 @@ body{
     color: white;
     font-weight: 700;
     border-radius: 60px;
+} */
+
+.btn1,
+a.btn1 {
+    background-color: red;
+    color: #fff;
+    padding: 15px 60px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s ease;
 }
+
+a.btn1:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.form-box {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
 .news{
     background-color: black;
     color: white;
 }
+
+.footer-section {
+    background: #fff; /* white background */
+    padding: 40px 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2); /* subtle 3D shadow */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 60px;
+}
 .fa-facebook{
-    font-size: 50px;
-    padding: 30px;
+    font-size: 20px;
+    padding: 20px;
 }
 .fa-instagram{
-    font-size: 50px;
-    padding: 30px;
+    font-size: 20px;
+    padding: 20px;
 }
 .fa-youtube{
-    font-size: 50px;
-    padding: 30px;
+    font-size: 20px;
+    padding: 20px;
 }
 .fa-tiktok{
-    font-size: 50px;
-    padding: 30px;
+    font-size: 20px;
+    padding: 20px;
 }
 
 
@@ -187,6 +265,29 @@ body{
     border-radius: 50px;
 }
 
+.product .card-body img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
+
+/* .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+} */
+
+
+.scroll-box {
+        max-height: 300px;
+        overflow-y: scroll;
+        padding-right: 15px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+    }
 
 

@@ -18,9 +18,13 @@ class CreateFoodTable extends Migration
             $table->string('name');
             $table->decimal('price', 8, 2);
             $table->text('description')->nullable();
+            $table->unsignedBigInteger('category_id');
             $table->string('img_path')->nullable();
             $table->timestamps();
+
+            $table->foreign('categorory_id')->references('id')->on('categories')->onDelete('cascade');
         });
+
     }
 
     /**

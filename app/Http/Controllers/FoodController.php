@@ -1,9 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Category;
 use App\Models\Food;
+use App\Models\Order;
+use App\Models\Table;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+
 
 class FoodController extends Controller
 {
@@ -14,8 +19,10 @@ class FoodController extends Controller
      */
     public function index()
     {
-        $foods = Food::all();
-    return view('admin.food.index', compact('foods'));
+        $foods = Food::with('category')->get();
+        $categories = Category::all();
+
+    return view('layouts.food', compact('foods','categories'));
     }
 
     /**
@@ -41,6 +48,7 @@ class FoodController extends Controller
             'price' => 'required|numeric',
             'description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'category_id' => 'required|exists:categories,id',
         ]);
     
         $imgPath = null;
@@ -53,9 +61,10 @@ class FoodController extends Controller
             'price' => $request->price,
             'description' => $request->description,
             'img_path' => $imgPath,
+            'categorory_id' => $request->category_id,
         ]);
     
-        return redirect()->route('food.index')->with('success', 'Food added!');
+        return redirect()->back()->with('success', 'Food added!');
     }
     /**
      * Display the specified resource.
@@ -99,6 +108,67 @@ class FoodController extends Controller
      */
     public function destroy(Food $food)
     {
-        //
+            
+        if ($food->img_path && \Storage::disk('public')->exists($food->img_path)) {
+            \Storage::disk('public')->delete($food->img_path); // Delete image
+        }
+
+        $food->delete(); // Delete food record
+        return redirect()->back()->with('success', 'Food item deleted!');
+    
     }
+
+
+    public function showMenu()
+
+
+// {
+//     $foods = Food::all(); 
+//     $categories = Category::with('foods')->get();
+//     $tables = \App\Models\Table::all(); // ✅ get tables here
+//     $activeOrder = null;
+
+//     if (Auth::check()) {
+//         $activeOrder = Order::where('customer_id', Auth::id())
+//             ->orderBy('created_at', 'desc')
+//             ->first();
+//     }
+
+//     return view('menu', compact('foods', 'categories', 'activeOrder', 'tables')); // ✅ pass it to view
+// }
+
+
+//     {
+//     $foods = Food::all(); 
+//     $categories = Category::with('foods')->get();
+
+    
+//     $activeOrder = null;
+
+//     if (Auth::check()) {
+//         $activeOrder = Order::where('customer_id', Auth::id())
+//             ->orderBy('created_at', 'desc')
+//             ->first();
+//     }
+
+//     return view('menu', compact('foods', 'categories', 'activeOrder'));
+// }
+
+
+{
+    $foods = Food::all(); 
+    $categories = Category::with('foods')->get();
+    $tables = Table::all(); // ✅ Add this line
+
+    $activeOrder = null;
+
+    if (Auth::check()) {
+        $activeOrder = Order::where('customer_id', Auth::id())
+            ->orderBy('created_at', 'desc')
+            ->first();
+    }
+
+    return view('menu', compact('foods', 'categories', 'activeOrder', 'tables')); // ✅ Include tables
+}
+
 }

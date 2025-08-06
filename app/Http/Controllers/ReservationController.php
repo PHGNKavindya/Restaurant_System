@@ -11,9 +11,18 @@ class ReservationController extends Controller
 {
 
     public function index()
+// {
+//     $tables = Table::all();
+//     return view('reservation', compact('tables'));
+// }
+
 {
     $tables = Table::all();
-    return view('reservation', compact('tables'));
+
+    // Get current user's reservations
+    $userReservations = Reservation::where('customer_id', Auth::id())->get();
+
+    return view('reservation', compact('tables', 'userReservations'));
 }
 
 public function create()
@@ -30,6 +39,7 @@ public function create()
             'email' => 'required|email',
             'date' => 'required|date',
             'time' => 'required',
+            'table_id' => 'required|exists:tables,id',
         ]);
 
         Reservation::create([
@@ -38,6 +48,7 @@ public function create()
             'date' => $request->date,
             'time' => $request->time,
             'customer_id' => Auth::id(),
+            'table_id' => $request->table_id,
         ]);
 
         return back()->with('success', 'Reservation successful!');
@@ -61,4 +72,13 @@ public function create()
 
         return back()->with('error', 'Reservation not found.');
     }
+
+    public function adminDelete($id)
+{
+    $reservation = Reservation::findOrFail($id);
+    $reservation->delete();
+
+    return redirect()->route('admin.reservations')->with('success', 'Reservation deleted.');
+}
+
 }

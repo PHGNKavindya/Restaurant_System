@@ -4,6 +4,12 @@
 @section('content')
 
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
    <!-- Reservation Form -->
 <form action="{{ route('reservation.store') }}" method="POST">
     @csrf
@@ -47,6 +53,23 @@
     </section>
 </form>
 
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+@if($userReservations->count())
+    <div class="alert alert-info">
+        <h5>Your Reservations</h5>
+        @foreach($userReservations as $res)
+            <p>
+                ✅ You reserved a table on <strong>{{ $res->date }}</strong> at <strong>{{ $res->time }}</strong>. <br>
+                Reservation ID: <strong>{{ $res->id }}</strong>
+            </p>
+        @endforeach
+    </div>
+@endif
 
 
 
@@ -64,7 +87,8 @@
                     <div class="mb-3">
                         <input type="text" name="reservationId" class="form-control" placeholder="Reservation ID" required>
                     </div>
-                    <button type="submit" class="btn btn-danger w-100">Cancel Reservation</button>
+                    <button
+                  type="submit" class="btn btn-danger w-100">Cancel Reservation</button>
                 </div>
             </div>
         </div>

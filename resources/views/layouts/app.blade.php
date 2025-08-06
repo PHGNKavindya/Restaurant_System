@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,7 +40,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>my website</title>
+    <title>Taste Haven</title>
 </head>
 <body>
     <div id="app">
@@ -135,20 +144,70 @@
 
 
 
-    <section class="news py-4">
-        <div class="container py-4">
-          <div class="row">
-            
-                <div class="footer m-auto text-center">      
-                  <span><i class="fa-brands fa-facebook"></i></span>
-                  <span><i class="fa-brands fa-instagram"></i></span>
-                  <span><i class="fa-brands fa-tiktok"></i></span>
-                  <span><i class="fa-brands fa-youtube"></i></span>
-                
+<footer class="footer-section bg-white text-dark pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <!-- About Us -->
+            <div class="col-md-3">
+                <h5>About Us</h5>
+                <p>We’re Taste Haven – bringing fresh flavors to your table daily. Enjoy comfort food with a modern twist.</p>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Our Mission</h5>
+                <p>To deliver quality food with speed and care, and provide a cozy place for friends and family.</p>
+            </div>
+
+            <!-- What We Offer -->
+            <div class="col-md-3">
+                <h5>What We Offer</h5>
+                <ul class="list-unstyled">
+                    <li>Order Meals Online Fast</li>
+                    <li>Book a Table Easily</li>
+                    <li>Fresh Daily Food Deals</li>
+                    <li>Real Customer Food Reviews</li>
+
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <!-- <div class="col-md-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ route('/') }}">Home</a></li>
+                    <li><a href="{{ route('menu') }}">Menu</a></li>
+                    <li><a href="{{ route('reservation') }}">Reservation</a></li>
+                    <li><a href="{{ route('contact') }}">Contact</a></li>
+                </ul>
+            </div> -->
+
+            <!-- Contact + Social -->
+            <div class="col-md-3">
+                <h5>Contact</h5>
+                <p>No. 23, Highlevel Road, Maharagama</br>Email: tastehaven@gmail.com</br>Phone: 0112 848825</p>
+                <div class="social-icons mt-3">
+                    <a href="https://www.facebook.com/wildcookbooksl" target="_blank" class="me-2 text-dark">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_wildcookbook_" target="_blank" class="me-2 text-dark">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@wildcookbook?lang=en" target="_blank" class="me-2 text-dark">
+                        <i class="fab fa-tiktok fa-lg"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCbpMy0Fg74eXXkvxJrtEn3w" target="_blank" class="text-dark">
+                        <i class="fab fa-youtube fa-lg"></i>
+                    </a>
+
+
                 </div>
-          </div>
+            </div>
         </div>
-      </section>
+        <hr>
+        <p class="text-center mb-0">&copy; 2025 Taste Haven. All Rights Reserved.</p>
+    </div>
+</footer>
+
 
       
 
